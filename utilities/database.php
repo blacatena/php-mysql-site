@@ -115,8 +115,7 @@ class Database
 
 	function loginForm($FormVariables)
 		{
-		global $ShortSkSUrl;
-		echo "<p>You need to login to access this page. New users, <a href='register'>click here to register</a>.</p>\r\n";
+		echo "<p>You need to login to access this page. New users, <a href='register.php'>click here to register</a>.</p>\r\n";
 		if (isset($this->LoginError))
 			echo "<p>".$this->LoginError."</p>";
 ?>
@@ -128,7 +127,6 @@ class Database
 		<tr><td>Password</td><td></td>
 			<td><input type='password' value='<?php echo $FormVariables['Password'] ?>' name='Password' style='width:150px'></td>
 		</tr>
-		<tr><td></td><td></td><td><input type='checkbox' name='AutoLogin' checked> Keep me logged in</td></tr>
 		<tr><td></td><td></td>
 			<td><input type='submit' value='Login'></td></tr>
 	</table>

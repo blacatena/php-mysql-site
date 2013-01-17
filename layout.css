@@ -41,6 +41,16 @@ table td {
 	padding: 15px;
 }
 
+form table {
+	background-color: #EEEEFF;
+	border: 1px solid #000099;
+}
+
+form table td {
+	padding: 2px;
+	border: none;
+}
+
 div.left, div.right {
 	color: #000099;
 }

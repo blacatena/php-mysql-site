@@ -1,5 +1,17 @@
 <?php
+	
 	header('Content-type: text/html; charset=utf-8');
+	
+	if (!isset($db))
+	{
+		include ('utilities/database.php');
+		include ('utilities/session.php');
+		$db = new Session;
+	}
+	
+	if (isset($_POST['Login']))
+		$db->login( $_POST['Username'], $_POST['Password']);
+	
 ?><!DOCTYPE HTML>
 <html>
 	<head>
@@ -29,8 +41,11 @@
 				<tr>
 					<td>
 						<div class="left">
-							Left
 <?php
+							include 'login.php';
+?>
+							<br/><br/>Left<br/><br/>
+<?php						
 							$Query = "SELECT * FROM content WHERE ColumnId = 1 ORDER BY SortSeq";
 							
 							$db->query($Query);
