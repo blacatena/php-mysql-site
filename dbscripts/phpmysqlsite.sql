@@ -102,7 +102,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (2,'test2','hdQ·Bßà8+Yó®iw','Test','Two','none@anywhere.com','2007-09-05'),(3,'test3','hdQ·Bßà8+Yó®iw','Test','Three','none@anywhere.com','2007-09-05'),(1,'test1','hdQ·Bßà8+Yó®iw','Test','One','none@anywhere.com','2010-03-11');
+INSERT INTO `user` VALUES (2,'test2','§«'Ê™Wïte‘h‰ÅH','Test','Two','none@anywhere.com','2007-09-05'),(3,'test3','§«'Ê™Wïte‘h‰ÅH','Test','Three','none@anywhere.com','2007-09-05'),(1,'test1','§«'Ê™Wïte‘h‰ÅH','Test','One','none@anywhere.com','2010-03-11');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
