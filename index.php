@@ -8,6 +8,7 @@
  * 		For clarity, all of these have been created as includes, but in most pages, while the initialization, header and footer will be included,
  * 		the main content will be right here, in the page.
  */
+	ini_set("display_errors", 1);
 
 	include 'utilities/database.php';
 	include 'utilities/session.php';

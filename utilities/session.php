@@ -53,6 +53,15 @@ class Session extends Database
 
 //-------------------------------
 //-------------------------------
+	function registerCart()
+	{
+		//global $sessioncart;
+		$sessioncart = array();
+		session_register( "sessioncart" );
+	}
+
+//-------------------------------
+//-------------------------------
 	
 	function logSession()
 	{
