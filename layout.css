@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #DDEEFF;
+}
+
+.center {
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1 {
+	color: #0000AA;
+}
+
+div h1 {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 5px 5px 15px #9999CC;
+	text-align: center;
+}
+
+h2 {
+	color: #0000CC;
+}
+
+hr {
+	color: #000099;
+	height: 3px;
+}
+
+table {
+	width: 100%;	
+	background-color: #FFFFFF;
+}
+
+table td {
+	border: 5px groove #0044AA;
+	padding: 15px;
+}
+
+div.left, div.right {
+	color: #000099;
+}
+
+div.header {
+	color: #000099;
+	text-align: center;
+}
+
+div.footer {
+	color: #000099;
+	text-align: center;
+}

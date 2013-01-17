@@ -15,7 +15,18 @@
 	$db = new Session;
 
 	include 'head.php';
-	include 'content.php';
-	include 'foot.php';
 	
+	echo "The value supplied for <em><b>a</b></em> was <em>".$_GET['a']."</em> and the value supplied for <em><b>b</b></em> was ".$_GET['b'];
+	echo "<br/><br/>";
+	
+	$Combined = $_GET['a'].$_GET['b'];
+	echo "Together that makes $Combined.";
+	echo "<br/><br/>";
+	
+	echo 'But if I use singled quotes I get $Combined.';
+	echo "<br/><br/>";
+	
+	echo "<a href='index.php'>Click here to return to the index</a>";
+
+	include 'foot.php';	
 ?>

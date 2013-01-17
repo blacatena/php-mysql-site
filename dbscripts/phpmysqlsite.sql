@@ -37,9 +37,9 @@ USE `phpmysqlsite`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `content` (
   `ContentId` int(11) NOT NULL AUTO_INCREMENT,
-  `Column` int(11) NOT NULL COMMENT '0 for top, 1 for left, 2 for center, 3 for right, 4 for bottom',
+  `ColumnId` int(11) NOT NULL COMMENT '0 for top, 1 for left, 2 for center, 3 for right, 4 for bottom',
   `Content` varchar(4000) NOT NULL,
-  `Sort` int(11) NOT NULL,
+  `SortSeq` int(11) NOT NULL,
   PRIMARY KEY (`ContentId`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -74,7 +74,7 @@ CREATE TABLE `page` (
 
 LOCK TABLES `page` WRITE;
 /*!40000 ALTER TABLE `page` DISABLE KEYS */;
-INSERT INTO `page` VALUES (1,'Test Page 1','testpage1.php?parm=123456'),(2,'','');
+INSERT INTO `page` VALUES (1,'Test Page 1','testpage1.php?parm=123456'),(2,'Test Page 2','testpage2.php?a=XYZ&b=ABC');
 /*!40000 ALTER TABLE `page` ENABLE KEYS */;
 UNLOCK TABLES;
 

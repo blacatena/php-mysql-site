@@ -15,7 +15,10 @@
 	$db = new Session;
 
 	include 'head.php';
-	include 'content.php';
-	include 'foot.php';
-	
+
+	echo "The parameter supplied was ".$_GET['parm'];
+	echo "<br/><br/>";
+	echo "<a href='index.php'>Click here to return to the index</a>";
+
+	include 'foot.php';	
 ?>
