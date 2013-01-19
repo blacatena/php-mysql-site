@@ -29,6 +29,8 @@ GRANT ALL PRIVILEGES ON phpmysqlsite.* TO 'phpuser'@'%';
 
 USE `phpmysqlsite`;
 
+SET NAMES utf8 COLLATE utf8_unicode_ci;
+
 --
 -- Table structure for table `content`
 --
