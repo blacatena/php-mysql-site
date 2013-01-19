@@ -22,7 +22,7 @@
 CREATE USER 'phpuser'@'localhost' IDENTIFIED BY 'phppass';
 CREATE USER 'phpuser'@'%' IDENTIFIED BY 'phppass';
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `phpmysqlsite` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `phpmysqlsite` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 GRANT ALL PRIVILEGES ON phpmysqlsite.* TO 'phpuser'@'localhost';
 GRANT ALL PRIVILEGES ON phpmysqlsite.* TO 'phpuser'@'%';
@@ -41,7 +41,7 @@ CREATE TABLE `content` (
   `Content` varchar(4000) NOT NULL,
   `SortSeq` int(11) NOT NULL,
   PRIMARY KEY (`ContentId`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +65,7 @@ CREATE TABLE `page` (
   `PageName` varchar(255) NOT NULL,
   `PageUrl` varchar(255) NOT NULL,
   PRIMARY KEY (`PageId`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +102,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (2,'test2','§«'Ê™Wïte‘h‰ÅH','Test','Two','none@anywhere.com','2007-09-05'),(3,'test3','§«'Ê™Wïte‘h‰ÅH','Test','Three','none@anywhere.com','2007-09-05'),(1,'test1','§«'Ê™Wïte‘h‰ÅH','Test','One','none@anywhere.com','2010-03-11');
+INSERT INTO `user` VALUES (2,'test2','§«\'Ê\Z™Wïte‘h‰ÅH','Test','Two','none@anywhere.com','2007-09-05'),(3,'test3','§«\'Ê\Z™Wïte‘h‰ÅH','Test','Three','none@anywhere.com','2007-09-05'),(1,'test1','§«\'Ê\Z™Wïte‘h‰ÅH','Test','One','none@anywhere.com','2010-03-11');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -115,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-01-16 16:46:00
+-- Dump completed on 2013-01-19 10:51:53

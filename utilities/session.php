@@ -17,12 +17,11 @@ class Session extends Database
 		parent::__construct();
 		$this->startSession();
 		
-    /* Determine if user is logged in */
-    $this->logged_in = $this->checkLogin();
+    	/* Determine if user is logged in */
+    	$this->logged_in = $this->checkLogin();
 		$this->CookieExpire = time()+60*60*24*100 ;
 
-		if( !$this->isRegistered( "sessioncart" ) )
-			$this->registerCart();
+		$this->registerCart();
 	}
 
 //-------------------------------
@@ -31,16 +30,6 @@ class Session extends Database
 	{
 		ini_set("session.gc_maxlifetime", "7200");
 		session_start();
-	}
-
-//-------------------------------
-//-------------------------------
-	function isRegistered( $sessionvariable )
-	{
-		if( session_is_registered( $sessionvariable ) )
-			return true;
-		else
-			return false;
 	}
 
 //-------------------------------
